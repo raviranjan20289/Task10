@@ -19,7 +19,8 @@ exports.postAddProduct = (req, res, next) => {
     title: title,
     imageUrl: imageUrl,
     price: price,
-    description: description
+    description: description,
+    userId : req.body.id
   }).then(result =>{
     console.log('saved successfuly');
     res.redirect('/admin/products');
